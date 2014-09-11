@@ -120,9 +120,9 @@ void CWMHMM::splitStentes(const char* inputfile, const char* outputfile)
 		//调用viterbi算法，得到path序列（int 数组）
 		WSHMM.viterbi(path);	
 		//通过path数组，将分隔符标记在字符串的vector容器中的每一个元素
-		WS.getVStrSegResult(path,str);
+		WS.getVStrSegResult(path,str,i);
 		fout<<str<<endl;
-		delete path;
+		//delete path;
 	}
 	return ;
 }

@@ -15,9 +15,9 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	vector<string> filelist;
 	filelist = getDBFileList();
-	string filename1 = "../iodata/inputdatapy"+ filelist[0].substr(1);
-	string segresult1 = "../iodata/segdata"+ filelist[0].substr(1);
-	string markresult1 = "../iodata/markdata"+ filelist[0].substr(1);
+	string filename1 = "../iodata/inputdatapy"+ filelist[31].substr(1);
+	string segresult1 = "../iodata/segdata"+ filelist[31].substr(1);
+	string markresult1 = "../iodata/markdata"+ filelist[31].substr(1);
 	const char* inputdata = filename1.c_str();
 	const char* segresult = segresult1.c_str();
 	const char* markresult = markresult1.c_str();
@@ -41,13 +41,16 @@ int _tmain(int argc, _TCHAR* argv[])
 	if(splitHMM.empty())
 	{
 		CWM.getSplitHMMModel();
-	}
+	}	
 	if(markHMM.empty())
 	{
 		CWM.getMarkHMMModel();
-	}
+	}	
 	CWM.splitStentes(inputdata, segresult);
+	cout<<"wordsplit success!!!"<<endl;
 	CWM.markWords(segresult, markresult);
+	cout<<"wordmark success!!!"<<endl;
+	cout<<"project success!!!"<<endl;
 	return 0;
 
 

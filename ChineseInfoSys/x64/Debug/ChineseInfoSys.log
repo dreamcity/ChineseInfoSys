@@ -1,17 +1,13 @@
-﻿生成启动时间为 2014/9/5 20:57:49。
+﻿生成启动时间为 2014/9/11 20:52:22。
      1>项目“D:\ProjectDev\ChineseInfoSys\ChineseInfoSys\ChineseInfoSys.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“x64\Debug\ChineseInfoSys.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         D:\ProgramDT\VisualStudio2010\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt WordSplit.cpp
-         WordSplit.cpp
-     1>WordSplit.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>d:\projectdev\chineseinfosys\chineseinfosys\WordSplit.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>WordSplit.cpp(52): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-     1>WordSplit.cpp(164): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-     1>WordSplit.cpp(233): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-     1>WordSplit.cpp(236): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+         D:\ProgramDT\VisualStudio2010\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt HMMmodel.cpp
+         HMMmodel.cpp
+     1>HMMmodel.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\HMMmodel.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
@@ -38,4 +34,4 @@
 
 生成成功。
 
-已用时间 00:00:01.57
+已用时间 00:00:00.95

@@ -73,6 +73,12 @@ void HMM::initialModel(const char* inputfile)
 		for (int j = 0; j < M; ++j)
 		{
 			fin >> TMatrix[i][j];
+			TMatrix[i][j] = log(TMatrix[i][j]+1.1);
+			//if(TMatrix[i][j] !=0)
+			//{
+			//	TMatrix[i][j] = 0 - log(TMatrix[i][j]+0.00001);
+			//}
+
 		}
 	}
 	for (int i = 0; i < M; ++i)
@@ -80,6 +86,11 @@ void HMM::initialModel(const char* inputfile)
 		for (int j = 0; j < N; ++j)
 		{
 			fin>> CMatrix[i][j];
+			CMatrix[i][j] = log(CMatrix[i][j]+1.1);
+			//if(CMatrix[i][j] !=0)
+			//{
+			//	CMatrix[i][j] = 0 - log(CMatrix[i][j]+0.00001);
+			//}
 		}
 	}
 	fin.close();
@@ -233,7 +244,7 @@ void HMM::viterbi(int* path )
 	//递归
 	//sigma[t][j] = max(sigma[t-1][i])*a[i][j]*b[j][O[t]]
 	//psi[t][j] = arg max(sigma[t-1][i])*a[i][j]
-	for (int t = 0; t < T-1; ++t)
+ 	for (int t = 0; t < T-1; ++t)
 	{
 		for (int i = 0; i < M; ++i)
 		{
@@ -250,9 +261,22 @@ void HMM::viterbi(int* path )
 				}
 			}
 			sigma[t+1][i] = max_value * CMatrix[i][O[t+1]];
+
 			psi[t+1][i] = pointer;
 		}
 	}
+	//****************
+	//cout<<"test sigma"<<endl;
+	//for (int i = 0; i < T; ++i)
+	//{
+	//	for (int j = 0; j < M; ++j)
+	//	{
+	//		cout << sigma[i][j]<<" ";
+	//	}
+	//	cout<<endl;
+	//	//sigma[i] = new double [M];
+	//}
+	//****************
 	double max_prob = 0.0;
 	path[T-1] =-1;
 	for (int i = 0; i < M; ++i)
@@ -263,9 +287,26 @@ void HMM::viterbi(int* path )
 			path[T-1] = i;
 		}
 	}
+	//***************************
+	//cout<<"test path"<<endl;
+	//for (int i = 0; i < T; ++i)
+	//{
+	//	
+	//	cout<<path[i]<<endl;
+	//	//sigma[i] = new double [M];
+	//}
+	//***************
 	for (int i = T-2; i >= 0; i--)
 	{
 		path[i] = psi[i+1][path[i+1]];
 	}
+	//cout<<"test path"<<endl;
+	//for (int i = 0; i < T; ++i)
+	//{
+	//	
+	//	cout<<path[i]<<" ";
+	//	//sigma[i] = new double [M];
+	//}
+	//cout<<endl;
 	return ;
-}
+} 

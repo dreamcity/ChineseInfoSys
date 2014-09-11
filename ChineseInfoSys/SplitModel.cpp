@@ -83,6 +83,109 @@ void SplitModel::initialModel()
 		}
 	}
 }
+//每一句话，单独写入一行
+//void SplitModel::getSplitSegFile(const char* inputfile, const char* outputfile)
+//{
+//	ifstream infile;
+//	infile.open(inputfile);
+//	ofstream outfile;
+//	outfile.open(outputfile);
+//	string strtmp;		//每一个待分割的字符串
+//	string str1 = "";	//存储分割之后的字符串
+//	string str2 = "";	//存储未完成的句子的后半部分
+//	//今天是个好天气，我们
+//	//去游泳，好不好
+//	//strtmp = 今天是个好天气，我们
+//	//str1 = 今天是个好天气，
+//	//str2 = 我们
+//	//strtmp = 去游泳，好不好
+//	//str1 = 我们 + 去游泳，
+//	//str2 = 好不好
+//	while(getline(infile, strtmp, '\n'))
+//	{
+//		if(strtmp.empty())
+//		{
+//			continue;
+//		}
+//		while(!strtmp.empty())
+//		{
+//			//*****************************
+//			//中文空格，去除掉
+//			unsigned char ch00 = strtmp[0];
+//			unsigned char ch11 = strtmp[1];
+//			while(ch00 ==161 && ch11==161)
+//			{
+//				strtmp= strtmp.substr(2);
+//				ch00 = strtmp[0];
+//				ch11 = strtmp[1];
+//			}
+//			//****************************
+//			int len = strtmp.length();
+//			int index = -1;
+//			for (int i = 0; i < len-4; )
+//			{
+//				unsigned char ch0 = strtmp[i];
+//				//为英文字符，索引加1，继续索引
+//				if (ch0 < 128)
+//				{
+//					i++;
+//				}
+//				else
+//				{
+//					unsigned char ch1 = strtmp[i+1];
+//					//当索引到的字符为，。；：！-?""时，结束索引
+//					if ((ch0 ==163 && ch1==161)||(ch0 ==161 && ch1==163)||(ch0 ==163 && ch1==187)
+//						||(ch0 ==163 && ch1==172)||(ch0 ==163 && ch1==191)
+//						||(ch0 ==163 && ch1==186))
+//					{
+//						index = i;
+//						break;
+//					}
+//					//为其他的中文字符，索引加2，继续索引
+//					else
+//					{
+//						unsigned char ch3 = strtmp[i+2];
+//						unsigned char ch4 = strtmp[i+3];
+//						if ((ch0 ==161 && ch1==170)&&(ch3 ==161 && ch4 ==170))
+//						{
+//							int j =i;
+//							while(ch3 ==161 && ch4 ==170)
+//							{
+//								j+=2;
+//								ch3 = strtmp[j+2];
+//								ch4 = strtmp[j+3];
+//							}
+//							index = j;
+//							break;
+//						}
+//						i+=2;
+//					}
+//				}
+//			}
+//			//如果结束索引时，字符串中，没用相应的标点，直接整个字符串赋值给str2
+//			if (index == -1)
+//			{
+//				str2 = strtmp.substr(0, len);
+//				strtmp = "";
+//			}
+//			// 将字符串strtmp按索引号分隔（将标点号包含），同时加上str2，即上一个字符串的末尾
+//			else
+//			{
+//				str1 = str2 + strtmp.substr(0, index+2);
+//				str2 = "";
+//				strtmp =strtmp.substr(index+2, len-index-2);
+//			}
+//
+//			if (str2.empty())
+//			{
+//				outfile << str1 <<endl;
+//				
+//			}
+//		}
+//	}
+//	outfile << str2 <<endl;
+//	return ;
+//}
 //对输入的测试文本进行处理，得到按照标点符号分隔之后的句子集合
 //每一句话，单独写入一行
 //类似getSplitSegFile
@@ -451,7 +554,7 @@ void getMap(const char* inputfile, std::map<string, int>& mm)
 	} 
 
 	map<string,int>::iterator m_it;
-	int num=0;
+	int num=1;
 	string t0,t1,tmp;
  	while(getline(infile, strtmp, '\n'))
  	{

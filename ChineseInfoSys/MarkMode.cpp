@@ -267,7 +267,7 @@ void MarkModel::getMapData(const char* inputfile, const char* outputfile)
 	ifstream infile(inputfile);
 	ofstream outfile(outputfile);
 	int valueS =0;
-	int valueW =0;
+	int valueW =1;
 	while(getline(infile, strtmp, '\n'))
  	{
 		if (strtmp.empty())
@@ -288,7 +288,7 @@ void MarkModel::getMapData(const char* inputfile, const char* outputfile)
 			int index = tmp.find("/");
 			if (index == -1)
 			{
-				cout <<"error"<<endl;
+				cout <<"indexerror"<<endl;
 				continue ;
 			}
 			string strw = tmp.substr(0, index);
@@ -448,7 +448,7 @@ void MarkModel::getConPro(const char* inputfile)
 			int index = tmp.find("/");
 			if (index == -1)
 			{
-				cout <<"error"<<endl;
+				cout <<"indexerror"<<endl;
 				break ;
 			}
 			string strw = tmp.substr(0, index);

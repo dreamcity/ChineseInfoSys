@@ -27,12 +27,13 @@ public:
 	//将每一行字符串push进vector中
 	void file2Vector(const char* inputfile);
 	//输入viterbi解码之后的序列，得到标注结果
-	void getVStrSegResult(int* path,  string & str2);
+	void getVStrSegResult(int* path,  string & str2, int index);
 
 
 private:
 	map<string, int> wordmap;
 	vector<string> vstr;
+	map<int,vector<string>> sentencemap;
 	int num;
 	int* T;
 	int** O;

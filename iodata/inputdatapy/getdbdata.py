@@ -1,8 +1,8 @@
-import datasource.baiduNewsXML as baiduNewsXML
+import datasource.dataXML as dataXML
 import datasource.mysqldb as mysqldb
-inputfolder = r'./datasource/baidunews'
-outputfile = r'./datasource/baidunewslist.xml'
-XD = baiduNewsXML.XMLData(inputfolder,outputfile)
+inputfolder = r'./datasource/SougouSource'
+outputfile = r'./datasource/SougouSourcelist.xml'
+XD = dataXML.XMLData(inputfolder,outputfile)
 XD.getXMLFile()
 # print(XD.filedict)
 # print(XD.labeldict)
