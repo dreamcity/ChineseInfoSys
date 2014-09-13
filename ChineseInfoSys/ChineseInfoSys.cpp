@@ -4,12 +4,7 @@
 #include "stdafx.h"
 #include "getdbfilelist.h"
 #include "CWMHMM.h"
-//#include "fstream"
-//#include "string"
-//#include <time.h>
-//#include <windows.h>
-//#include <time.h>
-//#include "CWMHMM.h"
+#include "WordFilter.h"
 using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -50,6 +45,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout<<"wordsplit success!!!"<<endl;
 	CWM.markWords(segresult, markresult);
 	cout<<"wordmark success!!!"<<endl;
+	const char* worddict = "../database/stopdict.txt";
+	WordFilter WF;
+	WF.getKeyWordsTF(markresult, worddict);
+	map<string, float> keywords = WF.getKeyWordsMap();
 	cout<<"project success!!!"<<endl;
 	return 0;
 

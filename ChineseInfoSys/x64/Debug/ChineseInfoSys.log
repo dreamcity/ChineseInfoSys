@@ -1,15 +1,84 @@
-﻿生成启动时间为 2014/9/11 20:52:22。
-     1>项目“D:\ProjectDev\ChineseInfoSys\ChineseInfoSys\ChineseInfoSys.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
+﻿生成启动时间为 2014/9/13 16:07:00。
+     1>项目“D:\ProjectDev\ChineseInfoSys\ChineseInfoSys\ChineseInfoSys.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“x64\Debug\ChineseInfoSys.lastbuildstate”。
+       InitializeBuildStatus:
          正在创建“x64\Debug\ChineseInfoSys.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         所有输出均为最新。
-         D:\ProgramDT\VisualStudio2010\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt HMMmodel.cpp
+         D:\ProgramDT\VisualStudio2010\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"x64\Debug\ChineseInfoSys.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\ProgramDT\VisualStudio2010\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt ChineseInfoSys.cpp CWMHMM.cpp HMMmodel.cpp MarkMode.cpp SplitModel.cpp WordFilter.cpp WordMark.cpp WordSplit.cpp
+         WordSplit.cpp
+     1>WordSplit.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\WordSplit.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>WordSplit.cpp(73): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordSplit.cpp(330): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordSplit.cpp(352): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordSplit.cpp(428): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordSplit.cpp(431): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordSplit.cpp(462): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+         WordMark.cpp
+     1>WordMark.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>WordMark.cpp(31): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordMark.cpp(41): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordMark.cpp(128): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+         WordFilter.cpp
+     1>WordFilter.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\WordFilter.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>WordFilter.cpp(15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordFilter.cpp(25): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordFilter.cpp(46): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordFilter.cpp(62): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>WordFilter.cpp(66): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>WordFilter.cpp(162): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+         SplitModel.cpp
+     1>SplitModel.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\SplitModel.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>SplitModel.cpp(217): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>SplitModel.cpp(273): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>SplitModel.cpp(283): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>SplitModel.cpp(296): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>SplitModel.cpp(525): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>SplitModel.cpp(565): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>SplitModel.cpp(619): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+         MarkMode.cpp
+     1>MarkMode.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>MarkMode.cpp(45): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(55): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(80): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(81): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(82): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(103): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(108): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(119): warning C4129: “/”: 不可识别的字符转义序列
+     1>MarkMode.cpp(119): warning C4129: “[”: 不可识别的字符转义序列
+     1>MarkMode.cpp(137): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(140): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(141): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(179): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(288): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(319): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(320): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>MarkMode.cpp(448): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
          HMMmodel.cpp
      1>HMMmodel.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
      1>d:\projectdev\chineseinfosys\chineseinfosys\HMMmodel.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         CWMHMM.cpp
+     1>CWMHMM.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\CWMHMM.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\SplitModel.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\WordSplit.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\HMMmodel.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         ChineseInfoSys.cpp
+     1>d:\projectdev\chineseinfosys\chineseinfosys\getdbfilelist.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\CWMHMM.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\SplitModel.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\WordSplit.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\HMMmodel.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\projectdev\chineseinfosys\chineseinfosys\WordFilter.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         Generating Code...
        ManifestResourceCompile:
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"x64\Debug\ChineseInfoSys.exe.embed.manifest.res" x64\Debug\ChineseInfoSys_manifest.rc 
        Link:
          D:\ProgramDT\VisualStudio2010\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\ProjectDev\ChineseInfoSys\x64\Debug\ChineseInfoSys.exe" /INCREMENTAL /NOLOGO libmysql.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Debug\ChineseInfoSys.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\ProjectDev\ChineseInfoSys\x64\Debug\ChineseInfoSys.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\ProjectDev\ChineseInfoSys\x64\Debug\ChineseInfoSys.lib" /MACHINE:X64 x64\Debug\ChineseInfoSys.exe.embed.manifest.res
          x64\Debug\ChineseInfoSys.obj
@@ -18,20 +87,31 @@
          x64\Debug\MarkMode.obj
          x64\Debug\SplitModel.obj
          x64\Debug\stdafx.obj
+         x64\Debug\WordFilter.obj
          x64\Debug\WordMark.obj
          x64\Debug\WordSplit.obj
          ChineseInfoSys.vcxproj -> D:\ProjectDev\ChineseInfoSys\x64\Debug\ChineseInfoSys.exe
        Manifest:
+         正在删除文件“x64\Debug\ChineseInfoSys.exe.embed.manifest”。
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"x64\Debug\ChineseInfoSys.exe.embed.manifest" /manifest x64\Debug\ChineseInfoSys.exe.intermediate.manifest
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"x64\Debug\ChineseInfoSys.exe.embed.manifest.res" x64\Debug\ChineseInfoSys_manifest.rc 
        LinkEmbedManifest:
-         所有输出均为最新。
+         D:\ProgramDT\VisualStudio2010\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\ProjectDev\ChineseInfoSys\x64\Debug\ChineseInfoSys.exe" /INCREMENTAL /NOLOGO libmysql.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Debug\ChineseInfoSys.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\ProjectDev\ChineseInfoSys\x64\Debug\ChineseInfoSys.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\ProjectDev\ChineseInfoSys\x64\Debug\ChineseInfoSys.lib" /MACHINE:X64 x64\Debug\ChineseInfoSys.exe.embed.manifest.res
+         x64\Debug\ChineseInfoSys.obj
+         x64\Debug\CWMHMM.obj
+         x64\Debug\HMMmodel.obj
+         x64\Debug\MarkMode.obj
+         x64\Debug\SplitModel.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\WordFilter.obj
+         x64\Debug\WordMark.obj
+         x64\Debug\WordSplit.obj
          ChineseInfoSys.vcxproj -> D:\ProjectDev\ChineseInfoSys\x64\Debug\ChineseInfoSys.exe
        FinalizeBuildStatus:
          正在删除文件“x64\Debug\ChineseInfoSys.unsuccessfulbuild”。
          正在对“x64\Debug\ChineseInfoSys.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“D:\ProjectDev\ChineseInfoSys\ChineseInfoSys\ChineseInfoSys.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“D:\ProjectDev\ChineseInfoSys\ChineseInfoSys\ChineseInfoSys.vcxproj”(rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.95
+已用时间 00:00:41.83
