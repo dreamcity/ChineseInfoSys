@@ -2,26 +2,23 @@
 //
 
 #include "stdafx.h"
-#include "getdbfilelist.h"
+#include "dbinfo.h"
 #include "CWMHMM.h"
 #include "WordFilter.h"
+
 using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	vector<string> filelist;
-	filelist = getDBFileList();
-	string filename1 = "../iodata/inputdatapy"+ filelist[31].substr(1);
-	string segresult1 = "../iodata/segdata"+ filelist[31].substr(1);
-	string markresult1 = "../iodata/markdata"+ filelist[31].substr(1);
-	const char* inputdata = filename1.c_str();
-	const char* segresult = segresult1.c_str();
-	const char* markresult = markresult1.c_str();
-	//const char* inputdata = "../iodata/inputfilepy"+ filelist[0].substr(1);
-	//const char* segresult = "../iodata/segresult.txt";
-	//const char* markresult = "../iodata/markresult.txt";
+	DBinfo DBI;
+	filelist = DBI.getDBFileList();
+	
+	string filename = "../iodata/inputdatapy"+ filelist[31].substr(1);
+	string segresult = "../iodata/segdata"+ filelist[31].substr(1);
+	string markresult = "../iodata/markdata"+ filelist[31].substr(1);
 	
 	ifstream infile;
-	infile.open(inputdata);
+	infile.open(filename.c_str());
 	string strtmp;
 	if (!infile.is_open())	// 打开输入文件失败则退出程序
 	{
@@ -41,41 +38,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		CWM.getMarkHMMModel();
 	}	
-	CWM.splitStentes(inputdata, segresult);
+	CWM.splitStentes(filename.c_str(), segresult.c_str());
 	cout<<"wordsplit success!!!"<<endl;
-	CWM.markWords(segresult, markresult);
+	CWM.markWords(segresult.c_str(), markresult.c_str());
 	cout<<"wordmark success!!!"<<endl;
 	const char* worddict = "../database/stopdict.txt";
 	WordFilter WF;
-	WF.getKeyWordsTF(markresult, worddict);
+	WF.getKeyWordsTF(markresult.c_str(), worddict);
 	map<string, float> keywords = WF.getKeyWordsMap();
+	DBI.saveKeywordsTF(markresult,keywords);
+	DBI.showdata();
 	cout<<"project success!!!"<<endl;
 	return 0;
-
-
-	//cout<<filename<<endl;
-	//cout<<filelist[0]<<endl;
-	//cout<<filelist.size()<<endl;
-	//ifstream infile;
-	//infile.open(filename);
-	//string strtmp;
-	//if (!infile.is_open())	// 打开输入文件失败则退出程序
-	//{
-	//	cout << "Unable to open input file: " << filelist[0]
-	//	<< " -- bailing out!" << endl;
-	//	exit(-1);
-	//}
-	//ofstream outfile;
-	//outfile.open("../1.txt");
-	//while(getline(infile, strtmp, '\n'))
-	//{
-	//	cout<<strtmp<<endl;
-	//	outfile << strtmp <<endl;
-	//	time_t t; 
-	//	time(&t);
-	//	outfile << "启动系统时间为: " << ctime(&t) <<endl;
-	//}
-	
-	//return 0;
 }
 

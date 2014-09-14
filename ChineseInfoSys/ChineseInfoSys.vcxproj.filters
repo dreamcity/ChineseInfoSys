@@ -48,6 +48,9 @@
     <ClInclude Include="WordFilter.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="dbinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -76,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="WordFilter.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dbinfo.cpp">
+      <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

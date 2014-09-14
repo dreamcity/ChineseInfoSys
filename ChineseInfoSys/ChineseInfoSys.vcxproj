@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CWMHMM.h" />
+    <ClInclude Include="dbinfo.h" />
     <ClInclude Include="getdbfilelist.h" />
     <ClInclude Include="HMMmodel.h" />
     <ClInclude Include="MarkModel.h" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="ChineseInfoSys.cpp" />
     <ClCompile Include="CWMHMM.cpp" />
+    <ClCompile Include="dbinfo.cpp" />
     <ClCompile Include="HMMmodel.cpp" />
     <ClCompile Include="MarkMode.cpp" />
     <ClCompile Include="SplitModel.cpp" />
