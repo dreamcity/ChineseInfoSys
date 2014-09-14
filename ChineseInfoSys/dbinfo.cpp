@@ -35,6 +35,7 @@ vector<string> DBinfo::getDBFileList()
 					filelist.push_back(sql_row[0]);
 				}
 			}
+			if(result!=NULL) mysql_free_result(result);//释放结果资源
 		}
 		else
 		{
@@ -44,11 +45,49 @@ vector<string> DBinfo::getDBFileList()
     {
         cout<<"connect database failed!"<<endl;
     }
-    if(result!=NULL) mysql_free_result(result);//释放结果资源
+    
     mysql_close(&myCont);//断开连接
     return filelist;
 }
-
+bool DBinfo::getFileFlag(string filename)
+{
+	bool flag;
+	MYSQL myCont;
+    MYSQL_RES *result;
+	int res;
+    mysql_init(&myCont);
+    if(mysql_real_connect(&myCont,host,user,pwd,dbname,port,NULL,0))
+    {
+        cout<<"connect database succeed!"<<endl;
+        mysql_query(&myCont, "SET NAMES utf-8"); //设置编码格式,否则在cmd下无法显示中文
+        string sqlorder =  "select filename from tfdatatable where filename ='" + filename + "'";
+        res=mysql_query(&myCont,sqlorder.c_str());//查询
+    	if(!res)
+        {
+            result=mysql_store_result(&myCont);//保存查询到的数据到result
+			unsigned int rowcount=mysql_num_rows(result); 
+            if(rowcount)
+			{
+				flag = TRUE; 
+			}
+			else
+			{
+				flag = FALSE; 
+			}
+			if(result!=NULL) mysql_free_result(result);//释放结果资源
+		}
+		else
+		{
+			cout<<"query sql failed!"<<endl;			}
+		}
+    else
+    {
+        cout<<"connect database failed!"<<endl;
+    }
+	
+	mysql_close(&myCont);//断开连接
+	return flag;
+}
 void DBinfo::saveKeywordsTF(string filename, map<string, float> keywords)
 {
     MYSQL myCont;
@@ -70,7 +109,8 @@ void DBinfo::saveKeywordsTF(string filename, map<string, float> keywords)
         	if(!res)
 	        {
             	result=mysql_store_result(&myCont);//保存查询到的数据到result
-            	if(!result)
+            	unsigned int rowcount=mysql_num_rows(result); 
+				if(rowcount !=0)
 				{
 					continue;
 				}
@@ -96,6 +136,7 @@ void DBinfo::saveKeywordsTF(string filename, map<string, float> keywords)
 					}
 
 				}
+				if(result!=NULL) mysql_free_result(result);//释放结果资源
 
 			}
 			else
@@ -103,12 +144,13 @@ void DBinfo::saveKeywordsTF(string filename, map<string, float> keywords)
 				cout<<"query sql failed!"<<endl;			
 			}
 		}
+		
 	}
     else
     {
         cout<<"connect database failed!"<<endl;
     }
-    if(result!=NULL) mysql_free_result(result);//释放结果资源
+    
     mysql_close(&myCont);//断开连接
 	return ;
 }

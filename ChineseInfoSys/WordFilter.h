@@ -13,9 +13,9 @@ public:
 	~WordFilter();
 	map<string, float> getKeyWordsMap();
 	void getWordMap(const char* inputfile);
-	void getFilterWord(const char* inputfile);
+	void getFilterWord();
 	void updateWordMap();
-	void getKeyWordsTF(const char* inputfile1, const char* inputfile2);
+	void getKeyWordsTF(const char* inputfile);
 private:
 	map<string, int> wordmap;
 	map<string, int> tfmap;
@@ -24,6 +24,6 @@ private:
 	set<string> posword;
 	int MaxVal;	  //输入的map表的数据个数，不含重复
 	int WordNum;  //输入数据的最大数目，包含重复元素
-	// const char* stopworddict; 
+	const char* stopworddict; 
 
 };

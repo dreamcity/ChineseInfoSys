@@ -13,6 +13,7 @@ public:
 	DBinfo();
 	~DBinfo();
 	vector<string> getDBFileList();
+	bool getFileFlag(string filename);
 	void saveKeywordsTF(string filename, map<string, float> keywords);
 	void showdata();
 private:

@@ -24,9 +24,6 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="getdbfilelist.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="CWMHMM.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -49,6 +46,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="dbinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="infodig.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -81,7 +81,10 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="dbinfo.cpp">
-      <Filter>头文件</Filter>
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="infodig.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

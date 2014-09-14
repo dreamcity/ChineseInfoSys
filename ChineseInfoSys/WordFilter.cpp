@@ -2,6 +2,7 @@
 using namespace std;
 WordFilter::WordFilter()
 {
+	stopworddict = "../database/stopdict.txt";
 }
 WordFilter::~WordFilter()
 {
@@ -95,10 +96,10 @@ void WordFilter::getWordMap(const char* inputfile)
     return ;
 }
 
-void WordFilter::getFilterWord(const char* inputfile)
+void WordFilter::getFilterWord()
 {
     string strtmp;
-    ifstream infile(inputfile);
+    ifstream infile(stopworddict);
     while(getline(infile, strtmp, '\n'))
     {
         if (strtmp.empty())
@@ -181,10 +182,10 @@ void WordFilter::updateWordMap()
     return ;
 }
 
-void WordFilter::getKeyWordsTF(const char* inputfile1, const char* inputfile2)
+void WordFilter::getKeyWordsTF(const char* inputfile)
 {
-    getWordMap(inputfile1);
-    getFilterWord(inputfile2);
+    getWordMap(inputfile);
+    getFilterWord();
     updateWordMap();
     return ;
 }

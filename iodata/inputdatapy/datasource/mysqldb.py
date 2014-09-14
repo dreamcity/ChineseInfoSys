@@ -19,7 +19,7 @@ class MySqlBase(object):
 		cur.execute(sqlorder)
 		sqlorder = "CREATE TABLE IF NOT EXISTS %s (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,label VARCHAR(30),labelNum INT(3),filename VARCHAR(100) NOT NULL UNIQUE)" %self.table1
 		cur.execute(sqlorder)
-		sqlorder = "CREATE TABLE IF NOT EXISTS %s (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,label VARCHAR(30),labelNum INT(3), filename VARCHAR(100) NOT NULL, wordname VARCHAR(20) , tfdata INT, UNIQUE KEY(filename,wordname))" %self.table2
+		sqlorder = "CREATE TABLE IF NOT EXISTS %s (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, filename VARCHAR(100) NOT NULL, wordname VARCHAR(20) , tfdata float, UNIQUE KEY(filename,wordname))" %self.table2
 		cur.execute(sqlorder)
 		cur.close()
 		cnx.commit()
