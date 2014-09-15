@@ -168,10 +168,10 @@ void WordFilter::updateWordMap()
 	for(;it!=tfmap.end();++it)
 	{
 		int tmp = tfmap[it->first];
-		if(tmp<2)
-		{
-			continue;
-		}
+		//if(tmp<2)
+		//{
+		//	continue;
+		//}
 		string word = it->first;
 		string::size_type position;
         position = word.find('/');       
