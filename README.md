@@ -1,4 +1,4 @@
 ChineseInfoSys
 ==============
 
-![image](https://github.com/dreamcity/ChineseInfoSys/new/master/test.result.png)
+![image](https://github.com/dreamcity/ChineseInfoSys/raw/master/test.result.png)
